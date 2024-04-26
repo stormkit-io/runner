@@ -28,6 +28,19 @@ Make sure to use `main` as the default branch for this repository.
 Note: If you're using a **Fine-grained token** make sure to expand `Repository permissions` and
 grant `Access: Read and write` to `Actions` item.
 
+## Setting Environments Variables
+
+After having created a new repository by clicking on `Use this template` we need to specify to the
+`STORMKIT_APP_SECRET` environment variable to handle encrypted data. To do that:
+
+1. Visit your repository
+1. Click on `Settings`
+1. On the left navigation menu find and expand **Security** > **Secrets and variables**
+1. Click on **Actions**
+1. Click on **New repository secret**
+1. Create a new secret called `STORMKIT_APP_SECRET` and make sure that it matches the secret used
+   by other microservices.
+
 ## License
 
 Check out our [License](./LICENSE.md).
