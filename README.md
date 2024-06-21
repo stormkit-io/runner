@@ -4,7 +4,7 @@ This repository allows Stormkit to use GitHub actions to run the deployments.
 
 ## Configuring Stormkit to use this Repository
 
-Make sure to set the following environments variables for both API and Workerserver Services:
+Fork this repository and make sure to set the following environments variables for both API and Workerserver Services:
 
 | Environment Variable        | Value                    | Description                                                               |
 | --------------------------- | ------------------------ | ------------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ grant `Access: Read and write` to `Actions` item.
 
 ## Setting Environments Variables
 
-After having created a new repository by clicking on `Use this template` we need to specify to the
+After having created a new repository by forking this template we need to specify the
 `STORMKIT_APP_SECRET` environment variable to handle encrypted data. To do that:
 
 1. Visit your repository
