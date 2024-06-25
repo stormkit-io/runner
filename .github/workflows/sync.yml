@@ -1,3 +1,5 @@
+name: sync
+
 on:
   # manual trigger
   workflow_dispatch:
