@@ -49,5 +49,6 @@ jobs:
 
       - name: Run deployer service
         id: run_deployer
+        if: always()
         run: ./runner --payload '${{ github.event.inputs.payload }}' --root-dir '${{github.workspace}}'
         timeout-minutes: 15
