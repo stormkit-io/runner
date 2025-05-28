@@ -44,6 +44,12 @@ jobs:
         with:
           version: latest
 
+      - name: Install mise
+        run: |
+          curl https://mise.run | sh
+          echo "$HOME/.local/share/mise/bin" >> $GITHUB_PATH
+          echo "$HOME/.local/share/mise/shims" >> $GITHUB_PATH
+
       - name: Prepare folder structure
         run: mkdir -p repo dist
 
