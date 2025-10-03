@@ -33,23 +33,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
-        if: ${{ github.event.inputs.runtime == 'node' }}
-        with:
-          node-version: ${{github.event.inputs.runtime_version}}
-      - uses: oven-sh/setup-bun@v1
-        if: ${{ github.event.inputs.runtime == 'bun' }}
-
-      - uses: pnpm/action-setup@v4
-        with:
-          version: latest
-
-      - name: Install mise
-        run: |
-          curl https://mise.run | sh
-          echo "$HOME/.local/share/mise/bin" >> $GITHUB_PATH
-          echo "$HOME/.local/share/mise/shims" >> $GITHUB_PATH
-
       - name: Prepare folder structure
         run: mkdir -p repo dist
 
